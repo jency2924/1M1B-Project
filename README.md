@@ -184,6 +184,10 @@ Project Structure
 
 
 
+Conclusion:
+
+The AI-Powered Fake News Detection System effectively identifies and classifies news as real or fake using Machine Learning and NLP techniques. With high accuracy and a simple interface, it helps users verify information quickly and reduces the spread of misinformation. This system promotes responsible digital communication and supports the creation of safer and more informed communities, contributing to SDG 11 – Sustainable Cities and Communities.
+
 
 
 
@@ -197,6 +201,3 @@ Y. Maria Jency
 
 🌍 SDG 11 – Sustainable Cities and Communities
 
-Conclusion:
-
-The AI-Powered Fake News Detection System effectively identifies and classifies news as real or fake using Machine Learning and NLP techniques. With high accuracy and a simple interface, it helps users verify information quickly and reduces the spread of misinformation. This system promotes responsible digital communication and supports the creation of safer and more informed communities, contributing to SDG 11 – Sustainable Cities and Communities.
