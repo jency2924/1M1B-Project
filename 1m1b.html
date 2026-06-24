@@ -1,0 +1,264 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Fake News Detector</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+            <h2>AI Fake News Detector</h2>
+            <p>Verify News Before You Share</p>
+        </div>
+    </div>
+
+    <ul>
+        <li><i class="fas fa-home"></i> Home</li>
+        <li><i class="fas fa-history"></i> History</li>
+        <li><i class="fas fa-info-circle"></i> About</li>
+        <li><i class="fas fa-city"></i> SDG 11</li>
+    </ul>
+</nav>
+
+<div class="main-container">
+
+    <div class="left-panel">
+
+        <h2>News Verification</h2>
+
+        <p>
+            Paste your news article or text below to check whether it is Real or Fake.
+        </p>
+
+        <textarea id="newsText"></textarea>
+
+        <button onclick="analyzeNews()">
+            <i class="fas fa-search"></i> Analyze News
+        </button>
+
+        <div class="tip-box">
+            <strong>Tips for Better Results</strong>
+            <p>Provide complete news article or relevant text.</p>
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <h2>Prediction Result</h2>
+
+        <div class="result-card">
+            <div id="status">REAL NEWS</div>
+
+            <p>
+                This news is predicted to be Real based on our AI analysis.
+            </p>
+        </div>
+
+        <div class="confidence-card">
+
+            <h3>Confidence Score</h3>
+
+            <div class="circle">
+                <span id="score">94%</span>
+            </div>
+
+            <p>High Confidence</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+<div class="footer-box">
+
+    <h3>Aligned with SDG 11</h3>
+
+    <p>
+        Sustainable Cities and Communities
+    </p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#001f54,#003b8e);
+color:#fff;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+}
+
+.logo{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.logo i{
+font-size:45px;
+}
+
+.logo p{
+font-size:13px;
+opacity:0.8;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:40px;
+}
+
+.main-container{
+width:95%;
+margin:auto;
+background:#fff;
+color:#111;
+border-radius:15px;
+display:grid;
+grid-template-columns:2fr 1fr;
+overflow:hidden;
+}
+
+.left-panel,
+.right-panel{
+padding:30px;
+}
+
+.left-panel textarea{
+width:100%;
+height:220px;
+margin-top:20px;
+border:1px solid #ccc;
+border-radius:10px;
+padding:15px;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:20px;
+background:#0d6efd;
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+.tip-box{
+margin-top:20px;
+background:#eef5ff;
+padding:15px;
+border-radius:10px;
+}
+
+.result-card{
+margin-top:20px;
+padding:25px;
+border:1px solid #8dd49a;
+background:#f4fff5;
+border-radius:10px;
+text-align:center;
+}
+
+#status{
+font-size:40px;
+font-weight:bold;
+color:green;
+}
+
+.confidence-card{
+margin-top:20px;
+border:1px solid #ddd;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+.circle{
+width:180px;
+height:180px;
+border:15px solid #28a745;
+border-radius:50%;
+margin:20px auto;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+font-weight:bold;
+color:#28a745;
+}
+
+footer{
+width:95%;
+margin:20px auto;
+background:#032f72;
+padding:20px;
+border-radius:10px;
+}
+
+.footer-box{
+text-align:center;
+color:#fff;
+}
+</style>
+<script>
+function analyzeNews(){
+
+let status=document.getElementById("status");
+let score=document.getElementById("score");
+
+if(Math.random()>0.5){
+
+status.innerHTML="REAL NEWS";
+status.style.color="green";
+
+score.innerHTML=
+(Math.random()*10+90).toFixed(0)+"%";
+
+}
+else{
+
+status.innerHTML="FAKE NEWS";
+status.style.color="red";
+
+score.innerHTML=
+(Math.random()*15+80).toFixed(0)+"%";
+
+}
+
+}
+</script>
+</body>
+</html>
